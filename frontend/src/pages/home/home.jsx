@@ -1,31 +1,51 @@
-import React from "react";
-import styles from './home.module.css'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import styles from './home.module.css';
 import Header from "../../assets/header";
 import Footer from "../../assets/footer";
-
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+    const [joke, setJoke] = useState("Loading joke...");
+    const navigate = useNavigate();
+
+    // Function to fetch a joke from backend
+    const fetchJoke = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/api/jokes/random');
+            setJoke(response.data.joke);
+        } catch (error) {
+            console.error("Failed to fetch joke:", error);
+            setJoke("Oops! Couldn’t load a joke. Try again.");
+        }
+    };
+
+    // Fetch joke on component mount
+    useEffect(() => {
+        fetchJoke();
+    }, []);
+
     return (
         <div>
             <Header />
             <div className={styles.container}>
                 <div className={styles.joke}>
-                <p>You know why developers prefer dark mode? Because light attract bugs.</p>
+                    <p>{joke}</p>
                 </div>
                 <div className={styles.next}>
-                    <button><img src="../../../public/next.png" alt="next" /></button>
+                    <button onClick={fetchJoke}>
+                        <img src="../../../public/next.png" alt="next" />
+                    </button>
                 </div>
             </div>
             <div className={styles.add}>
-                    <button>
-                        <p>
-                            Add new joke
-                        </p>
-                    </button>
+                <button onClick={() => navigate("/add")}>
+                    <p>Add new joke</p>
+                </button>
             </div>
-                <Footer />
+            <Footer />
         </div>
-    )
+    );
 }
 
 export default Home;

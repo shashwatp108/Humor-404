@@ -18,3 +18,37 @@
     font-size: 3rem;
   }
 
+
+body{
+  background-color: #252427;
+}
+
+.nav button {
+  background-color: #25242700;
+  border: 0;
+}
+
+.nav button:hover {
+  background-color: #25242700;
+}
+
+
+
+.loggedIn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loggedIn button{
+  background-color: #406789;
+}
+.loggedIn button:hover{
+  background-color: #093b64;
+}
+
+.loggedIn button p{
+  margin: 0px;
+  padding: 10px;
+}

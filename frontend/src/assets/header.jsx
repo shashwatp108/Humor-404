@@ -1,16 +1,41 @@
 import React from "react";
 import styles from './header.module.css'
+import { useNavigate } from "react-router-dom";
 
+function Header() {
+  const navigate = useNavigate();
 
-function Header (){
-return (
+  // Get user from localStorage
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    navigate('/login');
+  };
+
+  return (
     <div>
-        <div className={styles.nav}>
-            <h1 className={styles.title}>HUMOR 404</h1>
-            <p className={styles.username}>username</p>
+      <div className={styles.nav}>
+        <button onClick={() => navigate("/")}>
+          <h1 className={styles.title}>HUMOR 404</h1>
+        </button>
+        <div className={styles.login}>
+          {user ? (
+            <div className={styles.loggedIn}>
+              <p className={styles.username}>{user.username}</p>
+              <button onClick={handleLogout}>
+                <p className={styles.username}>Logout</p>
+              </button>
+            </div>
+          ) : (
+            <button onClick={() => navigate("/login")}>
+              <p className={styles.username}>Login</p>
+            </button>
+          )}
         </div>
+      </div>
     </div>
-)
+  );
 }
 
 export default Header;
