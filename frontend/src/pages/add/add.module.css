@@ -1,0 +1,44 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.text p {
+    color: #d5d5d4;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0rem 3rem;
+    padding:1rem 0rem;
+}
+
+.textbox textarea{
+    width: 60%;
+    height: 250px;
+    margin-left: 9rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: #d5d5d4;
+    background-color: #515155;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.submit p {
+    color: #d5d5d4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0px 10px;
+    margin: 10px;
+}
+
+.submit{
+    margin-left: 9rem;
+    margin-top: 1rem;
+}
