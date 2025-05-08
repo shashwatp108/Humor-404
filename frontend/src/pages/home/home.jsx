@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import styles from './home.module.css';
 import Header from "../../assets/header";
@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 function Home() {
     const [joke, setJoke] = useState("Loading joke...");
+    const fetchedOnce = useRef(false);
     const navigate = useNavigate();
 
     // Function to fetch a joke from backend
@@ -22,6 +23,8 @@ function Home() {
 
     // Fetch joke on component mount
     useEffect(() => {
+        if (fetchedOnce.current) return;
+        fetchedOnce.current = true;
         fetchJoke();
     }, []);
 
