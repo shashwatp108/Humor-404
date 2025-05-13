@@ -13,7 +13,7 @@ function Home() {
     // Function to fetch a joke from backend
     const fetchJoke = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/jokes/random');
+            const response = await axios.get('https://humor404.onrender.com/api/jokes/random');
             setJoke(response.data.joke);
         } catch (error) {
             console.error("Failed to fetch joke:", error);

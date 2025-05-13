@@ -12,7 +12,7 @@ function Register() {
 
     const handleRegister = async () => {
         try {
-            const res = await axios.post("http://localhost:5000/api/users/register", {
+            const res = await axios.post("https://humor404.onrender.com/api/users/register", {
                 username,
                 password
             });

@@ -21,10 +21,10 @@ function Add() {
       alert("You need to log in to add a joke.");
       return navigate('/login');
     }
-
+    
     try {
       // Send the joke data to the backend API
-      const response = await axios.post('http://localhost:5000/api/jokes/add', {
+      const response = await axios.post('https://humor404.onrender.com/api/jokes/add', {
         joke: jokeText,
         user_id: userId,
       });

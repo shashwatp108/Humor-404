@@ -13,7 +13,7 @@ function Contact() {
 
     // Send the message to the backend API to handle the email sending
     try {
-      const response = await axios.post('http://localhost:5000/api/contact/send-email', {
+      const response = await axios.post('https://humor404.onrender.com/api/contact/send-email', {
         message: message,
       });
 
