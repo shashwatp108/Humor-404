@@ -16,9 +16,11 @@ function Header() {
   return (
     <div>
       <div className={styles.nav}>
+        <div className={styles.home}>
         <button onClick={() => navigate("/")}>
           <h1 className={styles.title}>HUMOR 404</h1>
         </button>
+        </div>
         <div className={styles.login}>
           {user ? (
             <div className={styles.loggedIn}>
@@ -28,9 +30,11 @@ function Header() {
               </button>
             </div>
           ) : (
+            <div className={styles.loginbutton}>
             <button onClick={() => navigate("/login")}>
               <p className={styles.username}>Login</p>
             </button>
+            </div>
           )}
         </div>
       </div>

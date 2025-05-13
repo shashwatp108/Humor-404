@@ -3,7 +3,7 @@
     justify-content: space-between;
     margin: 1rem;
     padding: 1rem;
-}
+} 
 
 .username{
     color: #D4D4D4;
@@ -23,18 +23,17 @@ body{
   background-color: #252427;
 }
 
-.nav button {
+.home button {
   background-color: #25242700;
   border: 0;
 }
-
-.nav button:hover {
+.home :hover{
   background-color: #25242700;
 }
 
-
-
 .loggedIn{
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,13 +41,38 @@ body{
 }
 
 .loggedIn button{
+  margin: 0;
+  padding: 10px;
+  margin-left: 10px;
   background-color: #406789;
+}
+
+.loggedIn button p{
+  margin: 0;
+  padding: 0;
 }
 .loggedIn button:hover{
   background-color: #093b64;
 }
 
-.loggedIn button p{
-  margin: 0px;
+
+
+
+
+.loginbutton {
+  margin: 0;
+  padding: 0;
+}
+.loginbutton button{
+  margin: 0;
   padding: 10px;
+  background-color: #406789;
+}
+.loginbutton button p{
+  margin: 0;
+  padding: 0;
+}
+
+.loginbutton button :hover{
+  background-color: #093b64;
 }

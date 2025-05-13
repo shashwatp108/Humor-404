@@ -9,7 +9,7 @@ return (
     <div>
         <div className={styles.footer} >
                 <button onClick={() => navigate("/contact")}><p className={styles.work}>Got some work for me?</p></button>
-                <button><p className={styles.coffee}>Buy me a coffee ☕?</p></button>
+                {/* <button><p className={styles.coffee}>Buy me a coffee ☕?</p></button> */}
         </div>
     </div>
 )

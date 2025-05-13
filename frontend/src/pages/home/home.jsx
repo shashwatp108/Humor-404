@@ -20,7 +20,7 @@ function Home() {
             setJoke("Oops! Couldn’t load a joke. Try again.");
         }
     };
-
+    
     // Fetch joke on component mount
     useEffect(() => {
         if (fetchedOnce.current) return;
@@ -37,7 +37,8 @@ function Home() {
                 </div>
                 <div className={styles.next}>
                     <button onClick={fetchJoke}>
-                        <img src="../../../public/next.png" alt="next" />
+                        {/* <img src="../../../public/next.png" alt="next" /> */}
+                        <p>Next</p>
                     </button>
                 </div>
             </div>
