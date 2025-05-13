@@ -37,7 +37,6 @@ function Home() {
                 </div>
                 <div className={styles.next}>
                     <button onClick={fetchJoke}>
-                        {/* <img src="../../../public/next.png" alt="next" /> */}
                         <p>Next</p>
                     </button>
                 </div>

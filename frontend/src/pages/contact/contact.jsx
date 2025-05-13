@@ -48,7 +48,8 @@ function Contact() {
         <button onClick={handleSubmit}><p>Send</p></button>
       </div>
       <div className={styles.subtext}>
-        <p>It may take a while, but I will reply as soon as possible, don't worry!</p>
+        <p>Note: Remember to add your email or any other contact detail so that I can get back to you.
+          <br /><br />Don't worry I will reply ASAP 😊</p>
       </div>
       <Footer />
     </div>

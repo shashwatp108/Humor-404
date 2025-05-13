@@ -15,7 +15,7 @@
 
 .textbox {
     margin: 1rem 0rem 0rem 9rem ;
-
+ 
 }
 
 .textbox input{
@@ -53,3 +53,52 @@
     margin-left: 12rem;
     margin-top: 2rem;
 }
+
+
+@media (max-width: 768px) {
+    .text p {
+      font-size: 2.5rem;
+      margin-left: 3rem;
+      margin-top: 3rem;
+      text-align: left;
+    }
+  
+    .form {
+        display: flex;
+        flex-direction: column;
+      margin-left: 3rem;
+      align-items: left;
+        margin-bottom: 2rem;
+    }
+  
+    .textbox {
+      margin: 0.5rem;
+    }
+  
+    .textbox input {
+      width: 90%;
+      max-width: 300px;
+      height: 40px;
+      font-size: 1rem;
+      padding: 3px;
+      padding-left: 5px;
+    }
+  
+    .submit {
+      margin-left: 3rem;
+      text-align: left;
+      margin-top: 0rem;
+    }
+  
+    .submit p {
+      font-size: 0.9rem;
+      margin: 0.5rem;
+    }
+  
+    .subtext p {
+      margin: 1.5rem 0 0 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  }
+  

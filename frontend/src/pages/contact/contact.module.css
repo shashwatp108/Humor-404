@@ -47,3 +47,52 @@
     align-items: center;
     justify-content: center;
 }
+
+
+
+
+/* Responsive Nav for small screens */
+@media (max-width: 768px) {
+    .nav {
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.5rem;
+    }
+
+  
+    .username {
+      font-size: 1rem;
+    }
+
+    .text{
+      margin-top: 4rem;
+    }
+
+    .text p{
+        font-size: 1.5rem;
+
+    }
+    
+    .submit{
+        margin-left: 3rem;
+    }
+    .textbox textarea{
+        margin-left: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .loggedIn, .loginbutton {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .loggedIn button,
+    .loginbutton button {
+      width: 100%;
+      max-width: 200px;
+      margin: 0.5rem 0;
+    }
+  }
+  

@@ -20,6 +20,7 @@
 
 .joke {
     height: 400px;
+    overflow:auto;
 }
 
 .joke p{
@@ -40,3 +41,55 @@
 .add{
     margin: 3rem 3rem 0rem 3rem;
 }
+
+
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+  
+    .next button {
+      height: 100px;
+      width: 100px;
+      border-radius: 100px;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .next button p {
+      font-size: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .joke {
+      height: auto;
+      margin: 0rem;
+      padding: 0rem;
+
+    }
+  
+    .joke p {
+      font-size: 2rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+  
+    .add {
+      margin: 0;
+      margin-left: 2rem;
+    }
+  
+    .add p {
+      font-size: 1rem;
+      padding: 0.5rem 0.5rem;
+      margin: 0;
+    }
+  }
+  
